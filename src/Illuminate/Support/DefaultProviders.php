@@ -36,9 +36,20 @@ class DefaultProviders
             \Illuminate\Redis\RedisServiceProvider::class,
             \Illuminate\Translation\TranslationServiceProvider::class, // Localization (Arabic, etc.)
             \Illuminate\Validation\ValidationServiceProvider::class,
+            \Illuminate\Database\MigrationServiceProvider::class, // Migration commands (migrate, migrate:status, etc.)
+            \Illuminate\Foundation\Console\KeyGenerateCommand::class,
+            \Illuminate\Foundation\Console\ConfigClearCommand::class,
+            \Illuminate\Foundation\Console\ServeCommand::class,
+            \Illuminate\Database\Console\Migrations\MigrateCommand::class,
+            \Illuminate\Database\Console\Migrations\MigrateMakeCommand::class,
+            \Illuminate\Database\Console\Migrations\StatusCommand::class,
+            \Illuminate\Database\Console\Migrations\RollbackCommand::class,
+            \Illuminate\Database\Console\Migrations\RefreshCommand::class,
+            \Illuminate\Database\Console\Migrations\ResetCommand::class,
+            \Illuminate\Database\Console\Migrations\FreshCommand::class,
             
             // Optional providers (commented out for API-only - uncomment if needed)
-            // \Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class, // Artisan commands (minimal)
+            // \Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class, // Artisan commands (full - includes ArtisanServiceProvider, MigrationServiceProvider, ComposerServiceProvider)
             // \Illuminate\Mail\MailServiceProvider::class, // Email sending
             // \Illuminate\Auth\Passwords\PasswordResetServiceProvider::class, // Password reset
             // \Illuminate\Session\SessionServiceProvider::class, // Session (stateless API typically doesn't need)
