@@ -158,7 +158,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "12.x-dev"
+            "dev-master": "1.0.0"
         }
     },
     "suggest": {
