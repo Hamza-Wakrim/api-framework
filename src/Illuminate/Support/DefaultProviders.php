@@ -37,6 +37,7 @@ class DefaultProviders
             \Illuminate\Translation\TranslationServiceProvider::class, // Localization (Arabic, etc.)
             \Illuminate\Validation\ValidationServiceProvider::class,
             \Illuminate\Foundation\Providers\ArtisanServiceProvider::class, // Core Artisan commands (key:generate, config:clear, serve, etc.)
+            \Illuminate\Foundation\Providers\ComposerServiceProvider::class, // Composer service (required for make:migration and other commands)
             \Illuminate\Database\MigrationServiceProvider::class, // Migration commands (migrate, migrate:status, etc.)
             
             // Optional providers (commented out for API-only - uncomment if needed)
