@@ -17,9 +17,9 @@ trait ConfirmableTrait
      */
     public function confirmToProceed($warning = 'Application In Production', $callback = null)
     {
-        $callback = is_null($callback) ? $this->getDefaultConfirmCallback() : $callback;
+        $callback = $callback ?? $this->getDefaultConfirmCallback();
 
-        if ($callback) {
+        if (value($callback)) {
             if ($this->hasOption('force') && $this->option('force')) {
                 return true;
             }
