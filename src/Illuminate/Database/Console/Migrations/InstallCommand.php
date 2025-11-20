@@ -54,9 +54,10 @@ class InstallCommand extends Command
 
         if (! $this->repository->repositoryExists()) {
             $this->repository->createRepository();
+            $this->components->info('Migration table created successfully.');
+        } else {
+            $this->components->info('Migration table already exists.');
         }
-
-        $this->components->info('Migration table created successfully.');
     }
 
     /**
